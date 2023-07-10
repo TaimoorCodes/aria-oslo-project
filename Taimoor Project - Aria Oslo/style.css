@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Josefin+Sans:wght@400;600&family=Nunito+Sans&family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #111118;
+  color: #ffffff;
+  margin: 80px auto 50px auto;
+  width: 1120px;
+}
+
+h1,
+nav,
+footer {
+  font-size: 38px;
+  font-weight: 600;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: #F4BCBB;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 0 0 32px;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover,
+a.active {
+  color: #F4BCBB;
+  border-bottom: 2px solid #F4BCBB;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  margin: 80px 0 80px 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 32px 32px;
+  grid-auto-flow: dense;
+}
+
+section h1 {
+  grid-column: 2 / span 10;
+  text-align: center;
+}
+
+section.project div.artwork {
+  grid-column: 1 / span 8;
+  text-align: center;
+}
+
+section.project div.description {
+  grid-column: 9 / span 4;
+}
+
+section.project img {
+  max-height: 640px;
+}
+
+section.project-alt div.artwork {
+  grid-column: 5 / span 8;
+  text-align: center;
+}
+
+section.project-alt div.description {
+  grid-column: 1 / span 4;
+}
+
+section.about div.profile-pic {
+  grid-column: 1 / span 6;
+}
+
+section.about div.bio {
+  grid-column: 7 / span 6;
+}
+
+section.about h1 {
+  margin: 0px;
+  text-align: left;
+}
+
+section.about p {
+  margin: 16px 0 16px 0;
+}
+
+section.contact div.form {
+  grid-column: 4 / span 6;
+}
+
+section.contact h1 {
+  text-align: left;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  background-color: #111118;
+  border: 2px solid white;
+  color: white;
+  padding: 8px 16px 8px 16px;
+}
+
+label {
+  display: block;
+  margin: 16px 0 16px 0;
+}
+
+textarea {
+  height: 320px;
+}
+
+button {
+  background-color: #F4BCBB;
+  font-size: 24px;
+  border: none;
+  padding: 8px 16px 8px 16px;
+  font-family: Josefin Sans;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid #F4BCBB;
+  outline: none;
+}
+
+@media (max-width: 1248px) {
+  body {
+    width: auto;
+    margin: 80px 64px 48px 64px;
+  }
+
+  h1,
+  nav,
+  footer {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 920px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin: 24px 0 0 0;
+  }
+
+  header img {
+    max-width: 300px;
+  }
+
+  header a {
+    margin: 0 16px 0 16px;
+  }
+}
+
+@media (max-width: 660px) {
+  nav a {
+    margin: 8px 0 0 0;
+  }
+
+  section {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px 24px;
+    margin: 64px 0 64px 0;
+  }
+
+  section h1,
+  section.project div.artwork,
+  section.project div.description,
+  section.about div.bio,
+  section.about div.profile-pic,
+  section.contact div.form {
+    grid-column: 1 / span 4;
+  }
+}
+
+@media (max-width: 500px) {
+  header img {
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  body {
+    margin: 48px 32px 32px 32px;
+  }
+}
